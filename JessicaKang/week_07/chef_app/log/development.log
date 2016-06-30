@@ -1,0 +1,2322 @@
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateChefs (20160524114303)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "chefs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "nationality" text, "dob" date, "cooking_since" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160524114303"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/planets/" for ::1 at 2016-05-24 21:48:47 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/planets"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (20.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.3ms)
+
+
+Started GET "/chef" for ::1 at 2016-05-24 21:48:50 +1000
+
+ActionController::RoutingError (No route matches [GET] "/chef"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (73.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.7ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-24 21:48:54 +1000
+
+ActionController::RoutingError (No route matches [GET] "/chefs"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.1ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-24 22:30:09 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.8ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1856ms (Views: 1848.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-24 23:02:44 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.6ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-24 23:02:44 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-24 23:02:44 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-24 23:02:44 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-24 23:02:45 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-24 23:02:45 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-24 23:02:48 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-24 23:02:48 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-24 23:02:48 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-24 23:02:48 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-24 23:02:49 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-24 23:02:49 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 08:36:20 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (4.6ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 140ms (Views: 114.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 08:36:20 +1000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 08:36:20 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 08:36:20 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 08:36:20 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 08:36:20 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:27:19 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 09:27:19 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 09:27:19 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 09:27:19 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 09:27:19 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 09:27:19 +1000
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 09:27:24 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.9ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 104ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Chef with 'id'=1):
+  app/controllers/chefs_controller.rb:8:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (155.7ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 09:28:12 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.5ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Chef with 'id'=1):
+  app/controllers/chefs_controller.rb:8:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (140.8ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:28:15 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 46ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chefs" for ::1 at 2016-05-25 09:28:53 +1000
+Processing by ChefsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qdhFNS+tMi4GxtXOhaj4x6uT/AaAeAl7uZUug6wJiLNX4GqiMMI6lWtY+Lxec6NqyTXHhZaVywxCahnIEzz2EA==", "chef"=>{"name"=>"Gordon Ramsay", "nationality"=>"British", "dob"=>"1970/11/12", "cooking_since"=>"16 years old", "image"=>"https://thebrandbuilder.files.wordpress.com/2011/08/gordon-01.jpg"}, "commit"=>"Create Chef"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "chefs" ("name", "image", "dob", "nationality", "cooking_since", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Gordon Ramsay"], ["image", "https://thebrandbuilder.files.wordpress.com/2011/08/gordon-01.jpg"], ["dob", "1970-11-12"], ["nationality", "British"], ["cooking_since", "16 years old"], ["created_at", "2016-05-24 23:28:53.986073"], ["updated_at", "2016-05-24 23:28:53.986073"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/chefs/1
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 09:28:54 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:29:02 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:29:06 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:29:09 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chefs" for ::1 at 2016-05-25 09:30:23 +1000
+Processing by ChefsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pqCYazYZQYHipEjOx+TWCexC7YapFWpj3rMgrsEUCTBYmLf8KXZJOo86ZbwcP42kjuTWBb/4qBQlTBflfiF3kw==", "chef"=>{"name"=>"Julia Child", "nationality"=>"American", "dob"=>"1912/08/15", "cooking_since"=>"3 years old", "image"=>"http://thumbs.media.smithsonianmag.com//filer/Julia-Childs-Kitchen-631.jpg__800x600_q85_crop.jpg"}, "commit"=>"Create Chef"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "chefs" ("name", "image", "dob", "nationality", "cooking_since", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Julia Child"], ["image", "http://thumbs.media.smithsonianmag.com//filer/Julia-Childs-Kitchen-631.jpg__800x600_q85_crop.jpg"], ["dob", "1912-08-15"], ["nationality", "American"], ["cooking_since", "3 years old"], ["created_at", "2016-05-24 23:30:23.288483"], ["updated_at", "2016-05-24 23:30:23.288483"]]
+  [1m[35m (80.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/2
+Completed 302 Found in 86ms (ActiveRecord: 81.7ms)
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 09:30:23 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:30:26 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chefs" for ::1 at 2016-05-25 09:31:05 +1000
+Processing by ChefsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dDNRML/4ABsV0MJ82V1PCSVbrAAQQEYQvM5/R/ZR4kyKC36noJcIoHhO7w4ChhSkR/2XgwathGdHMUgMSWSc7w==", "chef"=>{"name"=>"Jamie Oliver", "nationality"=>"British ", "dob"=>"1975/05/27", "cooking_since"=>"4 years old", "image"=>"https://lh4.googleusercontent.com/-nzSdodhBPts/AAAAAAAAAAI/AAAAAAAASzQ/S6FCilALFdM/s0-c-k-no-ns/photo.jpg"}, "commit"=>"Create Chef"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "chefs" ("name", "image", "dob", "nationality", "cooking_since", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jamie Oliver"], ["image", "https://lh4.googleusercontent.com/-nzSdodhBPts/AAAAAAAAAAI/AAAAAAAASzQ/S6FCilALFdM/s0-c-k-no-ns/photo.jpg"], ["dob", "1975-05-27"], ["nationality", "British "], ["cooking_since", "4 years old"], ["created_at", "2016-05-24 23:31:05.276010"], ["updated_at", "2016-05-24 23:31:05.276010"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/3
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/chefs/3" for ::1 at 2016-05-25 09:31:05 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/3/edit" for ::1 at 2016-05-25 09:31:34 +1000
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered chefs/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/chefs/3" for ::1 at 2016-05-25 09:31:37 +1000
+Processing by ChefsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZu+7sopN5YUpW8SGCy5DACh1lRSs1wkuD2lbHw/jHNno5F51UY/LXk7QmDD9+KhYgft10RenlNDwpInwwry0A==", "chef"=>{"name"=>"Jamie Oliver", "nationality"=>"British ", "dob"=>"1975-05-27", "cooking_since"=>"4 years old", "image"=>"http://i.ndtvimg.com/i/2015-09/625-jamie-oliver-ians_625x350_51442052297.jpg"}, "commit"=>"Update Chef", "id"=>"3"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "chefs" SET "image" = ?, "updated_at" = ? WHERE "chefs"."id" = ?[0m  [["image", "http://i.ndtvimg.com/i/2015-09/625-jamie-oliver-ians_625x350_51442052297.jpg"], ["updated_at", "2016-05-24 23:31:37.589167"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/3
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/chefs/3" for ::1 at 2016-05-25 09:31:37 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:31:46 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chefs" for ::1 at 2016-05-25 09:34:39 +1000
+Processing by ChefsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oKJ7grq64tyn7UknIK/y17BLGssTxM+z6yfvlXJjMF5emlQVpdXqZ8pzZFX7dKl60u0hSAUpDcQQ2NjezVZO/Q==", "chef"=>{"name"=>"Guy Fieri", "nationality"=>"American", "dob"=>"1968/01/22", "cooking_since"=>"15 years old", "image"=>"http://www.eonline.com/eol_images/Entire_Site/2014324/rs_560x415-140424091452-1024.Guy-Fieri-Sliders.jl.042414_copy.jpg"}, "commit"=>"Create Chef"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "chefs" ("name", "image", "dob", "nationality", "cooking_since", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Guy Fieri"], ["image", "http://www.eonline.com/eol_images/Entire_Site/2014324/rs_560x415-140424091452-1024.Guy-Fieri-Sliders.jl.042414_copy.jpg"], ["dob", "1968-01-22"], ["nationality", "American"], ["cooking_since", "15 years old"], ["created_at", "2016-05-24 23:34:39.677883"], ["updated_at", "2016-05-24 23:34:39.677883"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/4
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/chefs/4" for ::1 at 2016-05-25 09:34:39 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:35:06 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/chefs" for ::1 at 2016-05-25 09:36:13 +1000
+Processing by ChefsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IdWnvUkL5Di8IOI9o7xs5akqJrbTi4+tQp6a3tOG5drf7YgqVmTsg9G+z094ZzdIy4wdNcVmTdq5Ya2VbLObeQ==", "chef"=>{"name"=>"Daniel Boulud", "nationality"=>"French", "dob"=>"1955/03/25", "cooking_since"=>"7 years old", "image"=>"http://cdn.cstatic.net/images/gridfs/52571ae8f92ea1383d0252f0/daniel-boulud-cookbook-interview.jpg"}, "commit"=>"Create Chef"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "chefs" ("name", "image", "dob", "nationality", "cooking_since", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daniel Boulud"], ["image", "http://cdn.cstatic.net/images/gridfs/52571ae8f92ea1383d0252f0/daniel-boulud-cookbook-interview.jpg"], ["dob", "1955-03-25"], ["nationality", "French"], ["cooking_since", "7 years old"], ["created_at", "2016-05-24 23:36:13.776355"], ["updated_at", "2016-05-24 23:36:13.776355"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/5
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/chefs/5" for ::1 at 2016-05-25 09:36:13 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/" for ::1 at 2016-05-25 09:36:16 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.4ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:36:21 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:36:50 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 09:36:50 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 09:36:50 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 09:36:50 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 09:36:50 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 09:36:50 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:37:09 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 09:37:09 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 09:37:09 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 09:37:09 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 09:37:09 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 09:37:09 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:37:23 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/edit" for ::1 at 2016-05-25 09:37:55 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Chef with 'id'=edit):
+  app/controllers/chefs_controller.rb:8:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (134.5ms)
+
+
+Started GET "/chefs/edit" for ::1 at 2016-05-25 09:39:33 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Chef with 'id'=edit):
+  app/controllers/chefs_controller.rb:8:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (60.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:39:42 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:41:12 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 09:41:12 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 09:41:12 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 09:41:12 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 09:41:12 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 09:41:12 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 09:41:16 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 09:41:56 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/1/edit" for ::1 at 2016-05-25 09:42:00 +1000
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/chefs/1" for ::1 at 2016-05-25 09:42:03 +1000
+Processing by ChefsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoLt3IVILHG+ATnwbbGZ2K4Abdtg1gh5Kvazbajez9fwusJLmickytOfFIK2asJ1zKZWWHY7yg7RCYQmF+uxdA==", "chef"=>{"name"=>"Gordon Ramsay", "nationality"=>"British", "dob"=>"1970-11-12", "cooking_since"=>"16 years old", "image"=>"https://thebrandbuilder.files.wordpress.com/2011/08/gordon-01.jpg"}, "commit"=>"Update Chef", "id"=>"1"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 09:42:03 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/4" for ::1 at 2016-05-25 09:43:45 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:43:50 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 09:43:50 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDishes (20160524234505)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "dishes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "origin" text, "method" text, "difficulty" text, "image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160524234505"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/planets/" for ::1 at 2016-05-25 16:44:55 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/planets"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (14.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 16:44:58 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.6ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 320ms (Views: 316.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 16:45:06 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 16:45:47 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 16:47:17 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.6ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 16:47:21 +1000
+Processing by DishesController#new as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered dishes/_form.html.erb (21.1ms)
+  Rendered dishes/new.html.erb within layouts/application (23.7ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `chef_id' for #<Dish:0x007f8fc6e245c0>):
+    25: 
+    26: <p>
+    27:   <%= f.label :chef_id %>
+    28:   <%= f.select :chef_id, Chef.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+    29: </p>
+    30: 
+    31: <%= f.submit %>
+  app/views/dishes/_form.html.erb:28:in `block in _app_views_dishes__form_html_erb__3842391726890559791_70127760824080'
+  app/views/dishes/_form.html.erb:3:in `_app_views_dishes__form_html_erb__3842391726890559791_70127760824080'
+  app/views/dishes/new.html.erb:3:in `_app_views_dishes_new_html_erb__1781429678102692334_70127746557000'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (152.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 16:50:22 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.6ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (25.1ms)
+  Rendered dishes/new.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `chef_id' for #<Dish:0x007f8fc8a4bc80>):
+    25: 
+    26: <p>
+    27:   <%= f.label :chef_id %>
+    28:   <%= f.select :chef_id, Chef.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+    29: </p>
+    30: 
+    31: <%= f.submit %>
+  app/views/dishes/_form.html.erb:28:in `block in _app_views_dishes__form_html_erb__3842391726890559791_70127747205420'
+  app/views/dishes/_form.html.erb:3:in `_app_views_dishes__form_html_erb__3842391726890559791_70127747205420'
+  app/views/dishes/new.html.erb:3:in `_app_views_dishes_new_html_erb__1781429678102692334_70127746557000'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (76.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.7ms)
+
+
+Started GET "/dish/new" for ::1 at 2016-05-25 16:50:28 +1000
+
+ActionController::RoutingError (No route matches [GET] "/dish/new"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (152.4ms)
+
+
+Started GET "/dish" for ::1 at 2016-05-25 16:51:23 +1000
+
+ActionController::RoutingError (No route matches [GET] "/dish"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.8ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 16:51:50 +1000
+Processing by DishesController#new as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered dishes/_form.html.erb (11.6ms)
+  Rendered dishes/new.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `chef_id' for #<Dish:0x007f8fc888bd78>):
+    25: 
+    26: <p>
+    27:   <%= f.label :chef_id %>
+    28:   <%= f.select :chef_id, Chef.all.map { |a| [ a.name, a.id ] }, :include_blank => true %>
+    29: </p>
+    30: 
+    31: <%= f.submit %>
+  app/views/dishes/_form.html.erb:28:in `block in _app_views_dishes__form_html_erb__3842391726890559791_70127747205420'
+  app/views/dishes/_form.html.erb:3:in `_app_views_dishes__form_html_erb__3842391726890559791_70127747205420'
+  app/views/dishes/new.html.erb:3:in `_app_views_dishes_new_html_erb__1781429678102692334_70127746557000'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddChefIdToDishes (20160525065443)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "dishes" ADD "chef_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160525065443"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes"  ORDER BY "dishes"."id" ASC LIMIT 1[0m
+  [1m[35mChef Load (0.5ms)[0m  SELECT  "chefs".* FROM "chefs"  ORDER BY "chefs"."id" ASC LIMIT 1
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs"  ORDER BY "chefs"."id" ASC LIMIT 1[0m
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes" WHERE "dishes"."chef_id" = ?  [["chef_id", 1]]
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 16:58:34 +1000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 16:58:38 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.7ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (16.2ms)
+  Rendered dishes/new.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 42ms (Views: 32.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 16:58:54 +1000
+Processing by DishesController#new as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered dishes/_form.html.erb (4.2ms)
+  Rendered dishes/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 16:58:55 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 16:58:55 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 16:58:55 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 16:58:55 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 16:58:55 +1000
+
+
+Started POST "/dishes" for ::1 at 2016-05-25 17:01:51 +1000
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXRDEEzw+5pyxCC6POG34wpY27WR+VzScmolHj+D6WCjTGyHU5/zIR9aDcjnOuxOaP7gNocUnqWJlRJVgLaXww==", "dish"=>{"name"=>"Beef Wellington", "origin"=>"England", "method"=>"BBQ", "difficulty"=>"Advanced", "image"=>"http://www.simplyrecipes.com/wp-content/uploads/2009/06/beef-wellington.jpg", "chef_id"=>"1"}, "commit"=>"Create Dish"}
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "dishes" ("name", "origin", "method", "difficulty", "image", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Beef Wellington"], ["origin", "England"], ["method", "BBQ"], ["difficulty", "Advanced"], ["image", "http://www.simplyrecipes.com/wp-content/uploads/2009/06/beef-wellington.jpg"], ["chef_id", 1], ["created_at", "2016-05-25 07:01:51.137686"], ["updated_at", "2016-05-25 07:01:51.137686"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dishes/1
+Completed 302 Found in 36ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-05-25 17:01:51 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.3ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mChef Load (0.7ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 88ms (Views: 81.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:01:53 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/1/edit" for ::1 at 2016-05-25 17:02:05 +1000
+Processing by ChefsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/chefs/1" for ::1 at 2016-05-25 17:02:07 +1000
+Processing by ChefsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fnLXuvHMODvUYqVNV30SOJnC8HutQnUP9cZfvm3xO7GASvgt7qMwgLn8iD+MpkmV+2TL+Luvt3gOOWj10sRFEg==", "chef"=>{"name"=>"Gordon Ramsay", "nationality"=>"British", "dob"=>"1970-11-12", "cooking_since"=>"16 years old", "image"=>"https://thebrandbuilder.files.wordpress.com/2011/08/gordon-01.jpg"}, "commit"=>"Update Chef", "id"=>"1"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/chefs/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:02:07 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:02:57 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (47.7ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x007f8fc2f4d428>:0x007f8fc8961478>
+Did you mean?  @dishes):
+    2: 
+    3: <% @dishes.each do |work| %>
+    4: 
+    5:   <%= link_to( image_tag( dish.image, :class => 'thumbnail' ), dish ) %>
+    6: 
+    7: <% end %>
+  app/views/dishes/index.html.erb:5:in `block in _app_views_dishes_index_html_erb___731252884179842604_70127747090840'
+  app/views/dishes/index.html.erb:3:in `_app_views_dishes_index_html_erb___731252884179842604_70127747090840'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.1ms)
+
+
+Started GET "/dish" for ::1 at 2016-05-25 17:03:12 +1000
+
+ActionController::RoutingError (No route matches [GET] "/dish"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.4ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 17:03:15 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (5.0ms)
+  Rendered dishes/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-05-25 17:03:18 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/show" for ::1 at 2016-05-25 17:05:11 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[35mDish Load (0.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Dish with 'id'=show):
+  app/controllers/dishes_controller.rb:18:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (78.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.9ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 17:05:21 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDish Load (0.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Dish with 'id'=2):
+  app/controllers/dishes_controller.rb:18:in `show'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (143.5ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-05-25 17:05:24 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:05:29 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 119ms (Views: 118.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:06:08 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 17:06:08 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 17:06:08 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 17:06:08 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 17:06:08 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 17:06:08 +1000
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:06:35 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `chef' for nil:NilClass):
+     9: </ul>
+    10: 
+    11: <h4>Famous Recipe:</h4>
+    12: <% if @dish.chef %>
+    13: <p>Chef: <%= link_to( @dish.chef.name, @dish.chef ) %></p>
+    14: <% end %>
+    15: 
+  app/views/chefs/show.html.erb:12:in `_app_views_chefs_show_html_erb__1647262045713094025_70127713295320'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.0ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:08:14 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (44.2ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x007f8fc2f4d428>:0x007f8fc89366d8>
+Did you mean?  @dishes):
+    2: 
+    3: <% @dishes.each do |work| %>
+    4: 
+    5:   <%= link_to( image_tag( dish.image, :class => 'thumbnail' ), dish ) %>
+    6: 
+    7: <% end %>
+  app/views/dishes/index.html.erb:5:in `block in _app_views_dishes_index_html_erb___731252884179842604_70127747090840'
+  app/views/dishes/index.html.erb:3:in `_app_views_dishes_index_html_erb___731252884179842604_70127747090840'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (71.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.1ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:08:24 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (37.2ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x007f8fc2f4d428>:0x007f8fc3a03188>
+Did you mean?  @dishes):
+    2: 
+    3: <%= @dishes.each do |work| %>
+    4: 
+    5:   <%= link_to( image_tag( dish.image, :class => 'thumbnail' ), dish ) %>
+    6: 
+    7: <% end %>
+  app/views/dishes/index.html.erb:5:in `block in _app_views_dishes_index_html_erb___731252884179842604_70127719550420'
+  app/views/dishes/index.html.erb:3:in `_app_views_dishes_index_html_erb___731252884179842604_70127719550420'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.0ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (159.8ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:08:38 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 17:08:38 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 17:08:38 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 17:08:38 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 17:08:38 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 17:08:38 +1000
+
+
+Started GET "/dishes/1" for ::1 at 2016-05-25 17:08:40 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:08:43 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 17:08:56 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (9.2ms)
+  Rendered dishes/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/dishes" for ::1 at 2016-05-25 17:11:40 +1000
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8vZKX66XI51z/LmnZ7oyyDIHRrOIRiZ9Iz/hhLg00dgMzmXIsfgrJh5ilNW8YWllUKF9MJ6r5ArYwNbPBwGvew==", "dish"=>{"name"=>"Beef Bourguignon", "origin"=>"France", "method"=>"Slow Cooked", "difficulty"=>"Medium", "image"=>"http://www.fuzionfit.com.au/images/BLOG/1.1.8_1_1.1.8_326X580.Jpeg", "chef_id"=>"2"}, "commit"=>"Create Dish"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "origin", "method", "difficulty", "image", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Beef Bourguignon"], ["origin", "France"], ["method", "Slow Cooked"], ["difficulty", "Medium"], ["image", "http://www.fuzionfit.com.au/images/BLOG/1.1.8_1_1.1.8_326X580.Jpeg"], ["chef_id", 2], ["created_at", "2016-05-25 07:11:40.394028"], ["updated_at", "2016-05-25 07:11:40.394028"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/dishes/2
+Completed 302 Found in 14ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 17:11:40 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 17:11:46 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (9.3ms)
+  Rendered dishes/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/dishes" for ::1 at 2016-05-25 17:13:48 +1000
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AEQ2unNOR8THlyzRbi99yr4cMypPCBVcgArlLn++BCL+fBktbCFPf6oJAaO19CZn3LoIqVnl1yt79dJlwIt6gQ==", "dish"=>{"name"=>"Chicken Pot Pie", "origin"=>"American", "method"=>"Stovetop", "difficulty"=>"Easy", "image"=>"http://17374-presscdn-0-15.pagely.netdna-cdn.com/wp-content/uploads/2004/12/chicken-leek-pie.jpg", "chef_id"=>"3"}, "commit"=>"Create Dish"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "origin", "method", "difficulty", "image", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Chicken Pot Pie"], ["origin", "American"], ["method", "Stovetop"], ["difficulty", "Easy"], ["image", "http://17374-presscdn-0-15.pagely.netdna-cdn.com/wp-content/uploads/2004/12/chicken-leek-pie.jpg"], ["chef_id", 3], ["created_at", "2016-05-25 07:13:48.192274"], ["updated_at", "2016-05-25 07:13:48.192274"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/dishes/3
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/dishes/3" for ::1 at 2016-05-25 17:13:48 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered dishes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 17:13:52 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (7.7ms)
+  Rendered dishes/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/dishes" for ::1 at 2016-05-25 17:16:09 +1000
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BkGTvv3GCi2KQKEzCB16Nm7OAKrmYjhw5sV2XYuKa1z4ebwp4qkClufejEHTxiGbDGg7KfCP+gcdOkEWNL8V/w==", "dish"=>{"name"=>"Bacon Cheeseburger", "origin"=>"American", "method"=>"BBQ", "difficulty"=>"Easy", "image"=>"http://vitalvegas.com/wp-content/flagallery/guy-fieris-vegas-kitchen-bar/guy_fieri_mac_cheese_burger.jpg", "chef_id"=>"4"}, "commit"=>"Create Dish"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "origin", "method", "difficulty", "image", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bacon Cheeseburger"], ["origin", "American"], ["method", "BBQ"], ["difficulty", "Easy"], ["image", "http://vitalvegas.com/wp-content/flagallery/guy-fieris-vegas-kitchen-bar/guy_fieri_mac_cheese_burger.jpg"], ["chef_id", 4], ["created_at", "2016-05-25 07:16:09.756065"], ["updated_at", "2016-05-25 07:16:09.756065"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/dishes/4
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/dishes/4" for ::1 at 2016-05-25 17:16:09 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDish Load (0.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered dishes/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 17:16:12 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (4.6ms)
+  Rendered dishes/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/dishes" for ::1 at 2016-05-25 17:17:38 +1000
+Processing by DishesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OC2LleWE8Nusf3ipRnEDEYKVdSl3inMcceZ9om1VlS/GFaQC+uv4YMHhVdudqli84DNOqmFnsWuKGUrp0mDrjA==", "dish"=>{"name"=>"Pot au Feu", "origin"=>"France", "method"=>"Braised", "difficulty"=>"Advanced", "image"=>"http://cache.boston.com/resize/bonzai-fba/Globe_Photo/2008/01/14/1200361336_4363/539w.jpg", "chef_id"=>"5"}, "commit"=>"Create Dish"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "dishes" ("name", "origin", "method", "difficulty", "image", "chef_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pot au Feu"], ["origin", "France"], ["method", "Braised"], ["difficulty", "Advanced"], ["image", "http://cache.boston.com/resize/bonzai-fba/Globe_Photo/2008/01/14/1200361336_4363/539w.jpg"], ["chef_id", 5], ["created_at", "2016-05-25 07:17:38.440832"], ["updated_at", "2016-05-25 07:17:38.440832"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/dishes/5
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/dishes/5" for ::1 at 2016-05-25 17:17:38 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDish Load (0.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered dishes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:17:41 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 17:17:45 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 17:17:47 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 17:18:38 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:40 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:47 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:50 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.3ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:51 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:52 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:52 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:52 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:57 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 17:20:57 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 17:20:57 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 17:20:57 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 17:20:57 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 17:20:57 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:58 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:59 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.3ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:59 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:20:59 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.3ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:00 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:00 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:00 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:00 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:00 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.4ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:02 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 17:21:05 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 17:23:58 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/1" for ::1 at 2016-05-25 17:24:00 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDish Load (0.1ms)[0m  [1mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered dishes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs/1" for ::1 at 2016-05-25 17:24:02 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered chefs/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 17:24:04 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dishes/5" for ::1 at 2016-05-25 17:24:07 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered dishes/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs/5" for ::1 at 2016-05-25 17:24:09 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mChef Load (0.2ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered chefs/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 20:26:47 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (1.4ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (26.7ms)
+  Rendered dishes/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 153ms (Views: 141.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:26:53 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:27:07 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:28:30 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:28:30 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:28:30 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:28:30 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:28:30 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:28:30 +1000
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 20:28:33 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:28:37 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.3ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:30:37 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:30:37 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:30:37 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:30:37 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:30:37 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:30:37 +1000
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:30:54 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.3ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:30:54 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:30:54 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:30:54 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:30:54 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:30:54 +1000
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:31:12 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:31:12 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:31:12 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:31:12 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:31:12 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:31:12 +1000
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 20:31:15 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.1ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 20:31:23 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 20:31:36 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChef Load (0.1ms)[0m  SELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/chefs/2" for ::1 at 2016-05-25 20:31:52 +1000
+Processing by ChefsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered chefs/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:31:52 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:31:52 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:31:52 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:31:52 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:31:52 +1000
+
+
+Started GET "/dishes/2" for ::1 at 2016-05-25 20:31:57 +1000
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mDish Load (0.2ms)[0m  SELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mChef Load (0.1ms)[0m  [1mSELECT  "chefs".* FROM "chefs" WHERE "chefs"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:31:57 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/" for ::1 at 2016-05-25 20:32:42 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:32:42 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:32:42 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:32:42 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:32:42 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:32:42 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:35:52 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:43:06 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.3ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:43:06 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:43:06 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:43:06 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:43:06 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:43:06 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:43:13 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 20:43:14 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 20:43:15 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 20:43:16 +1000
+Processing by DishesController#new as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered dishes/_form.html.erb (4.8ms)
+  Rendered dishes/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 20:43:19 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 20:43:20 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.2ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 20:43:21 +1000
+Processing by DishesController#new as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered dishes/_form.html.erb (6.8ms)
+  Rendered dishes/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 20:43:21 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:43:23 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:43:24 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 20:43:25 +1000
+Processing by DishesController#index as HTML
+  [1m[36mDish Load (0.4ms)[0m  [1mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:43:28 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.3ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:44:10 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:44:10 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:44:10 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:44:10 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:44:10 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:44:10 +1000
+
+
+Started GET "/home" for ::1 at 2016-05-25 20:44:12 +1000
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (103.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.5ms)
+
+
+Started GET "/home" for ::1 at 2016-05-25 20:44:12 +1000
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (102.8ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.1ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.9ms)
+
+
+Started GET "/home" for ::1 at 2016-05-25 20:44:43 +1000
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (99.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (63.9ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.1ms)
+
+
+Started GET "/home" for ::1 at 2016-05-25 20:46:01 +1000
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/jkang91/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (62.2ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jkang91/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (139.6ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:46:06 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.7ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 47ms (Views: 32.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:46:36 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.5ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-25 20:46:36 +1000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-25 20:46:36 +1000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-25 20:46:36 +1000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-25 20:46:36 +1000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-25 20:46:36 +1000
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:46:38 +1000
+Processing by ChefsController#index as HTML
+  [1m[35mChef Load (0.2ms)[0m  SELECT "chefs".* FROM "chefs"
+  Rendered chefs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/chefs" for ::1 at 2016-05-25 20:46:38 +1000
+Processing by ChefsController#index as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered chefs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dishes" for ::1 at 2016-05-25 20:46:39 +1000
+Processing by DishesController#index as HTML
+  [1m[35mDish Load (0.2ms)[0m  SELECT "dishes".* FROM "dishes"
+  Rendered dishes/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chefs/new" for ::1 at 2016-05-25 20:46:40 +1000
+Processing by ChefsController#new as HTML
+  Rendered chefs/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dishes/new" for ::1 at 2016-05-25 20:46:40 +1000
+Processing by DishesController#new as HTML
+  [1m[36mChef Load (0.2ms)[0m  [1mSELECT "chefs".* FROM "chefs"[0m
+  Rendered dishes/_form.html.erb (5.4ms)
+  Rendered dishes/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.2ms)

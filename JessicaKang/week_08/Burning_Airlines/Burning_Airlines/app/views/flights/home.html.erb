@@ -1,0 +1,44 @@
+<div id="main">
+  Burning Airlines
+</div>
+
+<script id="appViewTemplate" type="html/template">
+  <h1>Create A Flight</h1>
+
+  <div id="flightNameForm">
+  </div>
+
+ <ul id="flights">
+ </ul>
+</script>
+
+<script id="flightInputViewTemplate" type="html/template">
+<div id="flightNumber">
+<input class="flightNumber" type="text" name="flightNumberForm" placeholder="flight number" style="text-transform:uppercase"></input>
+</div>
+<br/>
+<div id="flightOrigin">
+<input class="flightOrigin" type="text" name="flightOriginForm" placeholder="flight origin" style="text-transform:uppercase"></input>
+</div>
+<br/>
+<div id="flightDestination">
+<input class="flightDestination" type="text" name="flightDestinationForm" placeholder="flight destination" style="text-transform:uppercase"></input>
+</div>
+<br/>
+<div id="flightDate">
+<input class="flightDate" type="datetime-local" name="flightDateForm" placeholder="flight date"></input>
+</div>
+<br/>
+<div id="flightPlane">
+<select name="" id="">
+<%= options_for_select Airplane.all.map { |a| [a.name, a.id] }, :include_blank => true %>
+</select>
+</div>
+<br/>
+<button type="submit" value="Submit">Submit</button>
+<br/>
+</script>
+
+
+<!-- $("select").val(); will get the id
+$("select option:selected").text(); will get the selected text -->

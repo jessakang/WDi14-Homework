@@ -1,0 +1,36 @@
+.seat {
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: gainsboro;
+  color: black;
+  list-style-position:inside;
+  border: 2px solid black;
+}
+
+//
+// classAvail {
+//   background-color: gainsboro;
+// }
+//
+// .classUnAvail {
+//   font-family: "simplifica", sans-serif;
+//   font-size: 40px;
+//   content: "X";
+//   background-color: red;
+// }
+
+.thumbnail {
+  max-width: 400px;
+  opacity: 0.8;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+}
+
+.main {
+  max-width: 1000px;
+}

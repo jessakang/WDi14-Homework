@@ -1,0 +1,163 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-top: 20px;
+  color: white;
+  text-align: center;
+  background: url("airplane.jpeg");
+  background-size: cover;
+
+}
+
+h1 {
+  padding-top: 0px;
+  text-align: left;
+  font-size: 60px;
+  padding-left: 15px;
+  font-weight: lighter;
+}
+
+h2 {
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 50px;
+  font-weight: lighter;
+  font-style: italic;
+  padding-top: 10px;
+}
+
+
+.navigation ul {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: gainsboro;
+    opacity: 0.4;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: lighter;
+    display: block;
+    color: black;
+    padding: 10px;
+    background-color: gainsboro;
+}
+
+nav li a:hover {
+  background-color: #767779;
+}
+
+.navigation {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+}
+
+.login {
+  text-align: center;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.signup {
+  text-align: center;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.sign_in {
+  text-align: right;
+  font-weight: lighter;
+}
+
+.field {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.user {
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+a {
+  color: #2f2c2c;
+}
+
+a:hover {
+  color: white;
+}
+
+.flightInfo {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.flightInfoTwo {
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.seatBoard {
+  align-items: center;
+}
+
+#user_id {
+  display: none;
+}
+
+button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-radius: 0px;
+  color: #ffffff;
+  font-size: 14px;
+  background: #6676b0;
+  opacity: 0.9;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+button:hover {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #767779;
+  text-decoration: none;
+}

@@ -1,0 +1,77 @@
+<div id="main">
+  Burning Airlines
+</div>
+<p id="user_name">
+<%= @current_user.name %>
+</p>
+<p id="user_id">
+<%= @current_user.id %>
+</p>
+<!-- <p id="user">
+<%= @users.pluck("name") %>
+</p> -->
+
+<script id="appViewTemplate" type="html/template">
+  <h1>Search Flights</h1>
+
+  <div id="searchWord">
+  </div>
+
+  <ul id="results">
+  </ul>
+</script>
+
+<script id="searchInputViewTemplate" type="html/template">
+
+<div id="searchOrigin">
+<input class="searchOrigin" type="text" name="searchOriginForm" placeholder="Origin" style="text-transform:uppercase"></input>
+</div>
+<br/>
+<div id="searchDestination">
+<input class="searchDestination" type="text" name="searchDestinationForm" placeholder="Destination" style="text-transform:uppercase"></input>
+</div>
+<br/>
+
+<button type="submit" value="Submit">Submit</button>
+
+
+</script>
+
+  <script id="flightTemplate" type="html/template">
+
+    <h1>Seats</h1>
+    <div class="flightInfo">
+    <span id="origin"></span>
+    <span> →  </span>
+    <span id="destination"></span>
+    </div>
+    <div class="flightInfoTwo">
+    <strong>Flight Number: </strong><span id="flight_number"></span>
+    <br/>
+    <strong>Date: </strong> <span id="date"></span>
+    <br/>
+    <strong>Plane: </strong> <span id="plane">
+    </div>
+
+
+    <div id="seatBoard">
+        <ul class="row1">
+          <li class="seat seat1" data-row='0' data-column='A'></li>
+          <li class="seat seat2" data-row='0' data-column='B'></li>
+          <li class="seat seat3" data-row='0' data-column='C'></li>
+          <li class="seat seat4" data-row='0' data-column='D'></li>
+        </ul>
+        <ul class="row2">
+          <li class="seat seat5" data-row='1' data-column='A'></li>
+          <li class="seat seat6" data-row='1' data-column='B'></li>
+          <li class="seat seat7" data-row='1' data-column='C'></li>
+          <li class="seat seat8" data-row='1' data-column='D'></li>
+
+        </ul>
+    </div>
+
+    <ul id="selectedSeat"></ul>
+    <button id="save">RESERVE</button>
+
+
+  </script>

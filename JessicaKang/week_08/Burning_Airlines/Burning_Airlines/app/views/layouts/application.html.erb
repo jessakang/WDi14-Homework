@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BurningAirlines</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <nav>
+            <div class="navigation">
+
+                <ul>
+                      <% if @current_user && @current_user.admin == true %>
+                      <li><%= link_to "LOG OUT", logout_path, :method => :delete %></li>
+                      <li><%= link_to "PROFILE", user_path(@current_user) %></li>
+                      <li><a href="/search">SEARCH</a></li>
+                      <li><a href="/flights/new">CREATE FLIGHT</a></li>
+                      <li><a href="/airplanes/new">VIEW AIRPLANES</a></li>
+                      <li><a href="/search">RESERVE</a></li>
+
+                      <% elsif @current_user %>
+                      <li><%= link_to "LOG OUT", logout_path, :method => :delete %></li>
+                      <li><%= link_to "PROFILE", user_path(@current_user) %></li>
+                      <li><a href="/search">SEARCH</a></li>
+                      <li><a href="/airplanes/new">VIEW AIRPLANES</a></li>
+                      <li><a href="/search">RESERVE</a></li>
+                  <% else %>
+                      <li><%= link_to "SIGN UP", new_user_path %></li>
+                      <li><%= link_to "LOG IN", login_path %></li>
+                      <% end %>
+                </ul>
+            </div>
+            <div class="sign_in">
+                        <% if @current_user %>
+                        Signed in as
+                        <%= @current_user.email %>
+                        <% end %>
+                    </div>
+        </nav>
+
+        <%= yield %>
+
+    </body>
+</html>

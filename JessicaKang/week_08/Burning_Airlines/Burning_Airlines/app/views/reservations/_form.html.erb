@@ -1,0 +1,30 @@
+<%= form_for(@reservation) do |f| %>
+  <% if @reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% @reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.select :user_id, User.all.map{ |u| [ u.name, u.id ] }, :include_blank => true %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.label :flight_id %><br>
+    <%= f.select :flight_id, Flight.all.map{ |f| [ f.flight_number, f.id ] }, :include_blank => true %>
+  </div>
+  <div class="field">
+    <%= f.label :seatID %><br>
+    <%= f.text_area :seatID %>
+  </div>
+  <br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

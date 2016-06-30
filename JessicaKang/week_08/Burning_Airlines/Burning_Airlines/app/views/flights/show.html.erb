@@ -1,0 +1,66 @@
+<div id="main">
+  Burning Airlines
+</div>
+
+
+<script id="appViewTemplate" type="html/template">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Flight number:</strong>
+  <%= @flight.flight_number %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @flight.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @flight.destination %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @flight.date %>
+</p>
+
+<p>
+  <strong>Plane:</strong>
+  <%= @flight.plane %>
+</p>
+
+  <h1>Seats</h1>
+
+  <div id="seatBoard">
+  </div>
+
+  <ul id="selectedSeat">
+  </ul>
+</script>
+
+
+<script id="flightSeatInputViewTemplate" type="html/template">
+
+<ul class="row1">
+  <p></p>
+  <li class="seat seat1" data-row='0' data-column='A'></li>
+  <li class="seat seat2" data-row='0' data-column='B'></li>
+  <li class="seat seat3" data-row='0' data-column='C'></li>
+  <li class="seat seat4" data-row='0' data-column='D'></li>
+
+</ul>
+<ul class="row2">
+  <li class="seat seat5" data-row='1' data-column='A'></li>
+  <li class="seat seat6" data-row='1' data-column='B'></li>
+  <li class="seat seat7" data-row='1' data-column='C'></li>
+  <li class="seat seat8" data-row='1' data-column='D'></li>
+
+</ul>
+
+</script>
+
+
+<%= link_to 'Edit', edit_flight_path(@flight) %> |
+<%= link_to 'Back', flights_path %>
